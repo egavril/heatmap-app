@@ -34,7 +34,7 @@ $(function() {
 
 	  
 		$.ajax({
-				  url: 'https://www.strava.com/oauth/token',
+				  url: 'https://www.strava.com/oauth/token/' + client_id + '/' + client_secret + '/' + code,
 				  dataType: 'jsonp',
 				  data: {
 						client_id: '13188',
