@@ -46,68 +46,68 @@ $(function() {
 				  }
 		});	
 
-  	var dropdown = $('.dropdown').val();
+  // 	var dropdown = $('.dropdown').val();
 
-  	$.ajax({
-		  url: 'https://www.strava.com/api/v3/athlete/activities',
-		  dataType: 'jsonp',
-		  data: {
-				access_token: access_token,
-		  },
-		  success: function(res) {
-		  	res = dropdown === 'all' ? res : res.filter(function(d) {return d.type.toLowerCase() === dropdown});
+  // 	$.ajax({
+		//   url: 'https://www.strava.com/api/v3/athlete/activities',
+		//   dataType: 'jsonp',
+		//   data: {
+		// 		access_token: access_token,
+		//   },
+		//   success: function(res) {
+		//   	res = dropdown === 'all' ? res : res.filter(function(d) {return d.type.toLowerCase() === dropdown});
 		  	
-		  	$.each(res, function(i, d) {
-		  		$.ajax({
-					  url: 'https://www.strava.com/api/v3/activities/'+ d.id +'/streams/latlng',
-					  dataType: 'jsonp',
-					  data: {
-					  	resolution: 'high',
-							access_token: access_token,
-					  },
-					  success: function(res) {
-					  	res = res[0].data;
+		//   	$.each(res, function(i, d) {
+		//   		$.ajax({
+		// 			  url: 'https://www.strava.com/api/v3/activities/'+ d.id +'/streams/latlng',
+		// 			  dataType: 'jsonp',
+		// 			  data: {
+		// 			  	resolution: 'high',
+		// 					access_token: access_token,
+		// 			  },
+		// 			  success: function(res) {
+		// 			  	res = res[0].data;
 
-				      $.each(res, function(i, d) {
-				      	polylineData.push({lat: d[0], lng: d[1]});
-				      });
+		// 		      $.each(res, function(i, d) {
+		// 		      	polylineData.push({lat: d[0], lng: d[1]});
+		// 		      });
 
-				//heatmapData, 
-				      drawHeatMap(polylineData);
-					  }
-					});
-		  	});
-		  }		  
-		});	
+		// 		//heatmapData, 
+		// 		      drawHeatMap(polylineData);
+		// 			  }
+		// 			});
+		//   	});
+		//   }		  
+		// });	
 
 
-		/* data points defined as an array of LatLng objects */
-		// add heat, to argument for heatmap
-		function drawHeatMap(poly) {
-			var mapOptions = new google.maps.Map(document.getElementById('map'), {
-			  center: new google.maps.LatLng(37.531960, -122.307609),
-			  zoom: 15,
-			  mapTypeId: google.maps.MapTypeId.ROADMAP
-			});
+		// /* data points defined as an array of LatLng objects */
+		// // add heat, to argument for heatmap
+		// function drawHeatMap(poly) {
+		// 	var mapOptions = new google.maps.Map(document.getElementById('map'), {
+		// 	  center: new google.maps.LatLng(37.531960, -122.307609),
+		// 	  zoom: 15,
+		// 	  mapTypeId: google.maps.MapTypeId.ROADMAP
+		// 	});
 
-			new google.maps.Map(document.getElementById('map'), mapOptions);
+		// 	new google.maps.Map(document.getElementById('map'), mapOptions);
 
-			// var heatmap = new google.maps.visualization.HeatmapLayer({
-			//   data: heat
-			// });
+		// 	// var heatmap = new google.maps.visualization.HeatmapLayer({
+		// 	//   data: heat
+		// 	// });
 
-			// heatmap.setMap(mapOptions);
+		// 	// heatmap.setMap(mapOptions);
 
-			var polyline = new google.maps.Polyline({
-			  path: poly,
-			  geodesic: true,
-			  strokeColor: 'blue',
-			  strokeOpacity: .5,
-			  strokeWeight: 2
-			});
+		// 	var polyline = new google.maps.Polyline({
+		// 	  path: poly,
+		// 	  geodesic: true,
+		// 	  strokeColor: 'blue',
+		// 	  strokeOpacity: .5,
+		// 	  strokeWeight: 2
+		// 	});
 
-			polyline.setMap(mapOptions);
-		}
+		// 	polyline.setMap(mapOptions);
+		// }
 	})	
 });
 
