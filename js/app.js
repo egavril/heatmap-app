@@ -1,22 +1,6 @@
-// function getRequest() {
-  // var params = {
+// var heatmapData = [];
+var polylineData = [];
 
-  // };
-
-  // var heatmapData = [];
-  var polylineData = [];
-
-
-$('#authButton').click(function(){
-
- });
-
-	// $(function() {
-	//   $('#auth-button').submit(function(event){
-	//     var searchTerm = $('#query').val();
-	//     getRequest(searchTerm);
-	//   });
-	// });
 
 $(function() {
   $('#loadButton').click(function(){
@@ -111,14 +95,7 @@ $(function() {
 	})	
 });
 
-// var trackCoordinates = [
-//   {lat: 37.772, lng: -122.214},
-//   {lat: 21.291, lng: -157.821},
-//   {lat: -18.142, lng: 178.431},
-//   {lat: -27.467, lng: 153.027}
-// ];
 
 
-// }
 
 // f22bb7b09c4feeac2deb43b1bbfeb95e699de968
