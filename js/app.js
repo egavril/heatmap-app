@@ -18,7 +18,7 @@ $(function() {
 
 	  
 		$.ajax({
-				  url: 'https://www.strava.com/oauth/token/',
+				  url: 'https://www.strava.com/oauth/token',
 				  dataType: 'jsonp',
 				  data: {
 						client_id: '13188',
