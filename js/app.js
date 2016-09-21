@@ -39,7 +39,7 @@ $(function() {
 				  data: {
 						client_id: '13188',
 						client_secret: '6de6f93060596bfc9f46916c1b34327d94eae71f',
-						code: code,
+						code: code, 
 				  },
 				  success: function(res) {
 				  	console.log(res)
