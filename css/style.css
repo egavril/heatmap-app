@@ -1,0 +1,69 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.left-panel {
+  position: absolute;
+  width: 15%;
+  height: 25%;
+  min-height: 200px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  font-family: sans-serif;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.auth-button {
+	margin-left: 20%;
+	padding-top: .75rem;
+}
+
+.options-header {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	text-align: center;
+	font-size: 1.5rem
+}
+
+.select-activity-type p {
+	padding-bottom: .25rem;
+	padding-left: 10%;
+	display: inline;
+}
+
+.select-activity-type {
+	font-family: sans-serif;
+	display: inline;
+
+}
+
+.load-button {
+	text-align: center;
+		margin-top: 1.5rem;
+}
+
+#loadButton {
+  background-color: #fc7602;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#loadButton:hover {
+	  background-color: #fc4c02;
+}
+
+#map {
+  height: 100%;
+  margin: 0;
+}

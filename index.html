@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Heatmap</title>
+  <link rel="stylesheet" href="css/reset.css">  
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  
+  <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbdWqSIh51znfiaBxjEs0KXeXRdUYKj6U&libraries=visualization">
+  </script> 
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+</head>
+
+  <body>
+  
+    <div class="left-panel">
+
+      <div class="auth-button">
+
+      <a href="https://www.strava.com/oauth/authorize?client_id=13188&response_type=code&redirect_uri=http://127.0.0.1:8080/&scope=write&state=mystate&approval_prompt=force">
+      <img alt="Connect with Strava" src="css/ConnectWithStrava.png" id = authButton></a>
+
+      </div>
+      
+      <h3 class="options-header">Options</h3>
+
+      <div class="select-activity-type">
+        <p>Activity type:</p>
+        <select class="dropdown">
+          <option value="run">Run</option>
+          <option value="ride">Ride</option>
+          <option value="all">All Activity Types</option>
+        </select> 
+      </div>
+      
+      <div class="load-button">
+        <button type="button" id="loadButton">Load</button>
+      </div>
+
+    </div>
+
+
+    
+    <div id="map"></div>
+
+
+    
+    <script src="js/app.js"></script> 
+  </body>
+
+<!-- b384075e7e0e0d713f6d243eb18f52200bf64b70
+ -->
+</html>
