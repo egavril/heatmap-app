@@ -5,7 +5,7 @@ var polylineData = [];
 $(function() {
   $('#loadButton').click(function(){
 
- 		grab code, exchange it for token, and save token to local storage
+ 		// grab code, exchange it for token, and save token to local storage
 		var getQueryString = function (field, url) {
 	  var href = url ? url : window.location.href;
 	  var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
