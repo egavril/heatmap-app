@@ -5,7 +5,7 @@ var polylineData = [];
 $(function() {
   $('#loadButton').click(function(){
 
- 		// grab code, exchange it for tokem, and save token to local storage
+ 		grab code, exchange it for token, and save token to local storage
 		var getQueryString = function (field, url) {
 	  var href = url ? url : window.location.href;
 	  var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
@@ -36,7 +36,7 @@ $(function() {
 		//   url: 'https://www.strava.com/api/v3/athlete/activities',
 		//   dataType: 'jsonp',
 		//   data: {
-		// 		access_token: access_token,
+		// 		access_token: 'f22bb7b09c4feeac2deb43b1bbfeb95e699de968',
 		//   },
 		//   success: function(res) {
 		//   	res = dropdown === 'all' ? res : res.filter(function(d) {return d.type.toLowerCase() === dropdown});
@@ -47,7 +47,7 @@ $(function() {
 		// 			  dataType: 'jsonp',
 		// 			  data: {
 		// 			  	resolution: 'high',
-		// 					access_token: access_token,
+		// 					access_token: 'f22bb7b09c4feeac2deb43b1bbfeb95e699de968',
 		// 			  },
 		// 			  success: function(res) {
 		// 			  	res = res[0].data;
@@ -65,7 +65,7 @@ $(function() {
 		// });	
 
 
-		// /* data points defined as an array of LatLng objects */
+		//  data points defined as an array of LatLng objects 
 		// // add heat, to argument for heatmap
 		// function drawHeatMap(poly) {
 		// 	var mapOptions = new google.maps.Map(document.getElementById('map'), {
@@ -76,11 +76,23 @@ $(function() {
 
 		// 	new google.maps.Map(document.getElementById('map'), mapOptions);
 
+
+
 		// 	// var heatmap = new google.maps.visualization.HeatmapLayer({
 		// 	//   data: heat
 		// 	// });
 
 		// 	// heatmap.setMap(mapOptions);
+
+		// 	// for (var i = 0; i < poly.length-1; i++) {
+		// 	// 	var polyline = new google.maps.Polyline({
+		// 	// 	path: [poly[i], poly[i+1]],
+		// 	// 	strokeColor: 'blue',
+		// 	// 	strokeOpacity: .5,
+		// 	// 	strokeWeight: 2,
+
+		// 	// 	});
+		// 	// }			
 
 		// 	var polyline = new google.maps.Polyline({
 		// 	  path: poly,
