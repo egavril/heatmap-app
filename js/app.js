@@ -18,16 +18,18 @@ $(function() {
 
 	  
 		$.ajax({
-				  url: 'https://www.strava.com/oauth/token',
-				  dataType: 'jsonp',
-				  data: {
-						client_id: '13188',
-						client_secret: '6de6f93060596bfc9f46916c1b34327d94eae71f',
-						code: code, 
-				  },
-				  success: function(res) {
-				  	console.log(res)
-				  }
+		  url: 'https://www.strava.com/oauth/token',
+		  dataType: 'json',
+		  contentType: "application/json",
+		  method: 'POST',
+		  data: {
+				client_id: '13188',
+				client_secret: '6de6f93060596bfc9f46916c1b34327d94eae71f',
+				code: code, 
+		  },
+		  success: function(res) {
+		  	console.log(res)
+		  }
 		});	
 
   // 	var dropdown = $('.dropdown').val();
