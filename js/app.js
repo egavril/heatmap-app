@@ -85,7 +85,7 @@ $(function() {
 		  url: 'https://www.strava.com/api/v3/athlete/activities',
 		  dataType: 'jsonp',
 		  data: {
-		  	per_page: '200',
+		  	per_page: '50',
 				access_token: 'f22bb7b09c4feeac2deb43b1bbfeb95e699de968',
 		  },
 		  success: function(res) {
