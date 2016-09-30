@@ -3,23 +3,30 @@ html, body {
   margin: 0;
 }
 
+#map {
+	width: 85%;
+	float: right;
+}
+
 .left-panel {
   position: absolute;
   width: 15%;
-  height: 25%;
+  height: 100%;
   min-height: 200px;
   z-index: 5;
   background-color: #fff;
-  padding: 5px;
   border: 1px solid #999;
   font-family: sans-serif;
-  margin-left: 5px;
-  margin-top: 5px;
 }
 
-.auth-button {
+/*.auth-button {
 	margin-left: 20%;
 	padding-top: .75rem;
+}
+*/
+
+li {
+	padding-top: 1rem;
 }
 
 .options-header {
@@ -29,16 +36,23 @@ html, body {
 	font-size: 1.5rem
 }
 
-.select-activity-type p {
+.select-activity-type p,
+.select-map-type p {
 	padding-bottom: .25rem;
+	padding-top: .25rem;
 	padding-left: 10%;
 	display: inline;
 }
 
-.select-activity-type {
+.select-activity-type,
+.select-map-type {
 	font-family: sans-serif;
 	display: inline;
 
+}
+
+.hide-map-checkbox {
+	padding-left: 10%;	
 }
 
 .load-button {

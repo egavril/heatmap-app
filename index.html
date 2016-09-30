@@ -15,24 +15,43 @@
   
     <div class="left-panel">
 
-      <div class="auth-button">
+<!--       <div class="auth-button">
 
-      <a href="https://www.strava.com/oauth/authorize?client_id=13188&response_type=code&redirect_uri=https://egavril.github.io/heatmap-app/&scope=write&state=mystate&approval_prompt=force">
+      <a href="https://www.strava.com/oauth/authorize?client_id=13188&response_type=code&redirect_uri=http://127.0.0.1:8080&scope=write&state=mystate&approval_prompt=force">
       <img alt="Connect with Strava" src="css/ConnectWithStrava.png" id = authButton></a>
 
-      </div>
+      </div> -->
       
       <h3 class="options-header">Options</h3>
-
-      <div class="select-activity-type">
-        <p>Activity type:</p>
-        <select class="dropdown">
-          <option value="run">Run</option>
-          <option value="ride">Ride</option>
-          <option value="all">All Activity Types</option>
-        </select> 
-      </div>
       
+      <ul>
+        <li>
+          <div class="select-activity-type">
+            <p>Activity type:</p>
+            <select class="activity-dropdown">
+              <option value="run">Run</option>
+              <option value="ride">Ride</option>
+              <option value="all">All Activity Types</option>
+            </select> 
+          </div>
+        </li> 
+          
+        <li>
+          <div class="select-map-type">
+            <p>Map type:</p>
+            <select class="map-dropdown" name="map-type">
+              <option value="standard">Standard</option>
+              <option value="dark">Dark</option>
+              <!-- <option value="all">All Activity Types</option> -->
+            </select> 
+          </div>  
+        </li>  
+
+        <li class="hide-map-checkbox">
+          <input type="checkbox" id="hide-map" value="hidden">Hide map
+        </li>
+      </ul>
+
       <div class="load-button">
         <button type="button" id="loadButton">Load</button>
       </div>
@@ -42,9 +61,9 @@
 
     
     <div id="map"></div>
-
-
     
+
+    <script src="js/map_styles.js"></script>  
     <script src="js/app.js"></script> 
   </body>
 
